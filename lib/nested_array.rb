@@ -24,16 +24,14 @@ def assembled_matrix
 end
 
 def sorted_matrix
-  ORGANIC_PRODUCE.sort!
-  CONVENTIONAL_PRODUCE.sort!
   array = [
-    CONVENTIONAL_PRODUCE,
-    ORGANIC_PRODUCE
+    CONVENTIONAL_PRODUCE.sort,
+    ORGANIC_PRODUCE.sort
     ]
 end
 
 def matrix_lookup(matrix, row, column)
-  matrix[column][row]
+  matrix[row][column]
 end
 
 def matrix_update(matrix, row, column, new_value)
